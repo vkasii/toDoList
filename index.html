@@ -1,55 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="./main.css">
 </head>
-
-<body>
-   <section class="section">
-      <div class="top-color"></div>
-      <div class="bottom-color"></div>
-      <img src="./img/pencil.png" alt="" class="pencil">
-      <div class="ipad-border">
-         <div class="ipad">
-            <div class="alert-empty">
-               <div class="alert-info">
-                  <h3>Попередження!</h3>
-                  <p>Пусте поле не можна добавити</p>
-               </div>
-               <div class="x">
-                  <span></span>
-               </div>
+<body onload="initializeData()">
+    <main>
+        <div class="to-do-list-container">
+            <form action="">
+                <input type="text" class="task-input" placeholder="Type your task here">
+                <button type="button" class="add-task-btn" onclick="addTask()">Add task</button>
+            </form>
+            <div class="tasks-container">
+    
             </div>
-            <div class="task-list">
-               <h2 class="task-list__title">Список завдань</h2>
-               <div class="task-list__tasks"></div>
-               <div class="alert-last-element">
-                  <div class="alert-info">
-                     <h3>Попередження!</h3>
-                     <p>Останній таск зі списку Ви не можете видалити.</p>
-                  </div>
-                  <div class="delete">
-                     <span></span>
-                  </div>
-               </div>
-            </div>
-            <div class="new-task">
-               <h2 class="new-task__title">Додати нове завдання</h2>
-               <form name="add-task">
-                  <input type="text">
-               </form>
-               <button type="button">додати</button>
-            </div>
-         </div>
-      </div>
-   </section>
-
-   <script src="./js/script.js"></script>
+        </div>
+        <div class="tasks-amount">
+            <p>You have completed <span class="tasks-done"></span> tasks out of <span class="total-tasks" ></span></p>
+        </div>
+    </main>
+    <script src="./script.js"></script>
 </body>
-
 </html>
